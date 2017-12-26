@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.microservice</groupId>
+    <artifactId>MicroService_FeignClient</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>MicroService_FeignClient_Server</module>
+        <module>MicroService_FeignClient_Client</module>
+    </modules>
+    <parent>
+        <artifactId>MicroService_Parent</artifactId>
+        <groupId>com.microservice</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.microservice</groupId>
+            <artifactId>MicroService_FeignClient_Server</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+    </dependencies>
+    </dependencyManagement>
+
+</project>

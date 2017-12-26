@@ -1,0 +1,35 @@
+server:
+  port: 15006
+#config:
+#   userPath: http://192.168.0.100:8091/user/userInfo/getUserList
+spring:
+  application:
+    name: MicroService_Hystrix_Server
+## INFO
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+#eureka信息配置
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://chendom:root123@localhost:8500/eureka/
+      defaultZone: http://localhost:15000/eureka/
+  instance:
+     prefer-ip-address: true
+#     #定制应用的名称
+     instance-id: ${spring.application.name}:${server.port} #传统地址
+endpoints:
+  shutdown:
+    enabled: true #表示开启shutdown关闭的方式
+    sensitive: false #表示不需要密钥
+#进行校验
+#security:
+#  user:
+#    name: chendom
+#    password: root@123
+#    role: SUPERUSER

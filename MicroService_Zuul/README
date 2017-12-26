@@ -1,0 +1,6 @@
+zuul:
+  routes:
+     Zuul_Client:                                 # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+        path: /api-a/**                           # 想要映射到的路径
+        service-id: MicroService_Zuul_Client      # Eureka中的serviceId
+在上面的地方需要注意的是在路径访问的时候    http://localhost:15009/api-a/information/getInfo    即可访问到接口

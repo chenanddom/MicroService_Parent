@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>com.microservice</groupId>
+    <artifactId>MicroService_Hystrix</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <artifactId>MicroService_Parent</artifactId>
+        <groupId>com.microservice</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>MicroService_Hystrix_Server</module>
+        <module>MicroService_Hystrix_Client</module>
+    </modules>
+
+
+</project>
