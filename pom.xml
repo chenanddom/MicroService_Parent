@@ -15,6 +15,7 @@
         <module>MicroService_Hystrix</module>
         <module>MicroService_Turbine</module>
         <module>MicroService_Zuul</module>
+        <module>MicroService_Config</module>
     </modules>
     <!-- 引入spring boot的依赖 -->
     <parent>
