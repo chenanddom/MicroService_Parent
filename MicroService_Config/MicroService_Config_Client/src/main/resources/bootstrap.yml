@@ -1,41 +1,17 @@
-server:
-  port: 15012
-#config:
-#   userPath: http://192.168.0.100:8091/user/userInfo/getUserList
-#spring:
-#  application:
-#    name: MicroService_Config_Client
-### INFO
-#info:
-#  app:
-#    name: @project.artifactId@
-#    encoding: @project.build.sourceEncoding@
-#    java:
-#      source: @java.version@
-#      target: @java.version@
-##eureka信息配置
-#eureka:
-#  client:
-#    serviceUrl:
-##      defaultZone: http://chendom:root123@localhost:8500/eureka/
-#      defaultZone: http://localhost:15000/eureka/
-#  instance:
-#     prefer-ip-address: true
-##     #定制应用的名称
-#     instance-id: ${spring.application.name}:${server.port}
-
-
 #spring.application.name=config-client
 #spring.cloud.config.label=master
 #spring.cloud.config.profile=dev
-#spring.cloud.config.uri= http://localhost:8888/
-#server.port=8881
+#spring.cloud.config.uri= http://localhost:15011/
+#server.port=15012
+
 spring:
   application:
-    name: MicroService_Config_Client
+    name: config-client
   cloud:
-     config:
-        label: master
-        profile: dev
-        uri: http://localhost:15011/
-
+    config:
+      uri: http://localhost:15011/
+      label: master
+  profiles:
+    active: dev
+server:
+  port: 15012

@@ -5,20 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microservice</groupId>
     <artifactId>MicroService_Config</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>MicroService_Config_Server</module>
         <module>MicroService_Config_Client</module>
     </modules>
-    <parent>
+<!--    <parent>
         <artifactId>MicroService_Parent</artifactId>
         <groupId>com.microservice</groupId>
         <version>1.0-SNAPSHOT</version>
-    </parent>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-    </dependencies>
+    </parent>-->
+
+
 </project>
