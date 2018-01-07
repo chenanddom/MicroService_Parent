@@ -16,6 +16,7 @@
         <module>MicroService_Turbine</module>
         <module>MicroService_Zuul</module>
         <module>MicroService_Config</module>
+        <module>MicroserviceLombok</module>
     </modules>
     <!-- 引入spring boot的依赖 -->
     <parent>
@@ -69,6 +70,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+        <!-- lombok实现数据的DTO的类的注解完美实现，无需太多的代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
