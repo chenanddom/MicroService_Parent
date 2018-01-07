@@ -1,14 +1,6 @@
-foo: foo version 2
+#foo: foo version 2
 #democonfigclient.message=hello spring io
 message: this is message
-# INFO
-info:
-  app:
-    name: @project.artifactId@
-    encoding: @project.build.sourceEncoding@
-    java:
-      source: @java.version@
-      target: @java.version@
 #eureka信息配置
 eureka:
   client:
