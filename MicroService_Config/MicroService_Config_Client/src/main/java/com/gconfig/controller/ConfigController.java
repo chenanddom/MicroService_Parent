@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConfigController {
-    @Value("${foo}")
-    String foo;
+    @Value("${message}")
+    String message ;
     @RequestMapping(value = "/hi")
     public String hi(){
-        return foo;
+        return message;
     }
 }

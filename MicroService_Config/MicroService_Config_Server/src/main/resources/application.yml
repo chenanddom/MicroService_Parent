@@ -9,10 +9,12 @@ spring:
     config:
       server:
         git:
-           uri: https://github.com/forezp/SpringcloudConfig/
-           search-paths: respo
+#           uri: https://github.com/forezp/SpringcloudConfig/
+           uri: https://github.com/chenanddom/MicroService_Parent/
+           search-paths: MicroService_Config/configuration-repo
            username:
            password:
+
       label: master
 
 
