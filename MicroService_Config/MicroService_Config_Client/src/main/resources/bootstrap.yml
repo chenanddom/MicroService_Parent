@@ -6,7 +6,7 @@
 
 spring:
   application:
-    name: config-client
+    name: MicroService_Config_Client
   cloud:
     config:
       uri: http://localhost:15011/
@@ -15,3 +15,4 @@ spring:
     active: dev
 server:
   port: 15012
+

@@ -14,33 +14,25 @@ spring:
            search-paths: MicroService_Config/configuration-repo
            username:
            password:
-
       label: master
 
-
-#spring.cloud.config.server.git.uri=https://github.com/forezp/SpringcloudConfig/
-#spring.cloud.config.server.git.searchPaths=respo
-#spring.cloud.config.label=master
-#spring.cloud.config.server.git.username=
-#spring.cloud.config.server.git.password=
-
-## INFO
-#info:
-#  app:
-#    name: @project.artifactId@
-#    encoding: @project.build.sourceEncoding@
-#    java:
-#      source: @java.version@
-#      target: @java.version@
-##eureka信息配置
-#eureka:
-#  client:
-#    serviceUrl:
-##      defaultZone: http://chendom:root123@localhost:8500/eureka/
-#      defaultZone: http://localhost:15000/eureka/
-#  instance:
-#     prefer-ip-address: true
-##     #定制应用的名称
-#     instance-id: ${spring.application.name}:${server.port}
+# INFO
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+#eureka信息配置
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://chendom:root123@localhost:8500/eureka/
+      defaultZone: http://localhost:15000/eureka/
+  instance:
+     prefer-ip-address: true
+#     #定制应用的名称
+     instance-id: ${spring.application.name}:${server.port}
 
 

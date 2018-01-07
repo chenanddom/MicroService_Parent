@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class ConfigClientApplication {
     public static void main(String[] args){
         SpringApplication.run(ConfigClientApplication.class,args);
