@@ -13,6 +13,7 @@ public class ConsulClientApplication {
 
     @RequestMapping("/getInformation")
     public String home() {
+
         return "this is information";
     }
 
