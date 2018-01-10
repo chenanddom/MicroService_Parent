@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.contextPath}/health
+        healthCheckInterval: 15s
+        instance-id: MicroService_Consul_Client
+  application:
+    name: MicroService_Consul_Client
+server:
+  port: 15013
