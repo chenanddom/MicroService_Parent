@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.postgresql.mapper.PostgresQLMapper">
+    <resultMap id="BaseResultMap" type="com.postgresql.model.Person">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"></result>
+    </resultMap>
+    <sql id="BaseTable">
+    person
+</sql>
+    <insert id="addPerson" parameterType="com.postgresql.model.Person">
+    INSERT INTO person(name) values(#{name})
+</insert>
+    <delete id="deletePerson" parameterType="java.lang.Integer">
+    DELETE FROM person where id=#{id}
+</delete>
+
+    <update id="updatePerson" parameterType="com.postgresql.model.Person">
+    UPDATE person SET name=#{name} WHERE id=#{id}
+</update>
+
+    <select id="getPersonById" parameterType="java.lang.Integer" resultType="com.postgresql.model.Person">
+    SELECT *
+    FROM person
+    WHERE id=#{id}
+</select>
+    <insert id="insertBatchPerson">
+        <!--<selectKey resultType="int" keyProperty="id" order="AFTER">-->
+            <!--select @@IDENTITY as id-->
+        <!--</selectKey>-->
+        INSERT INTO
+        person(id,name)
+        values
+        <foreach collection="persons" item="person" separator=",">
+          (#{person.id,jdbcType=INTEGER},#{person.name,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+    
+    
+</mapper>

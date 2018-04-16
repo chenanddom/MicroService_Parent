@@ -17,7 +17,7 @@
         <module>MicroService_Zuul</module>
         <module>MicroService_Config</module>
         <module>MicroserviceLombok</module>
-        <module>MicroService_Consul</module>
+        <!--<module>MicroService_Consul</module>-->
         <module>MicroService_Quartz</module>
     </modules>
     <!-- 引入spring boot的依赖 -->
